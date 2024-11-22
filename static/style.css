@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --prim: #AEA434;
+    --seco: #ED583F;
+    --back: #EDDBC2;
+    --dark: #391212;
+
+    /* Neutral Colors */
+    --offgr: #f4f4f4;
+
+    /* Additional Colors */
+    --darker: #260c0c;
+    --dark-gray: #555;
+    --blue: #3498db;
+    --gren: #2ecc71;
+    --red: #e74c3c;
+}
+
+/* Reset some default browser styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* Set up the container to use Flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body fills the viewport */
+    text-align: left; /* Align all text on the page to the left */
+}
+
+/* Container for all content */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow the container to grow and push the footer down */
+    background-color: var(--back);
+}
+
+/* Header styles */
+header {
+    background-color: var(--prim);
+    color: var(--back);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: dashed;
+    border-bottom-color: var(--back);
+}
+
+header .logo a {
+    font-family: Indie Flower;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--back); /* Logo color */
+    text-decoration: none;
+    margin: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    flex-direction: column;
+    margin-top: 7px;
+    justify-content: center;
+}
+
+header nav ul li a {
+    color: var(--back);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding-left: 1%;
+}
+
+main h1 {
+    color: var(--dark);
+}
+
+main p {
+    font-size: 18px;
+    color: var(--dark);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--seco);
+    border-top: dashed;
+    border-top-color: var(--back);
+    color: var(--back);
+}
+
+/* Form styles */
+form.formContainer {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items horizontally */
+    justify-content: left; /* Center items vertically */
+    padding: 20px; /* Add padding for spacing inside */
+    margin: 2%; /* Center the form on the page */
+    background-color: var(--prim);
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+}
+
+form.formContainer label {
+    display: block; /* Make labels block elements */
+    font-weight: bold;
+    color: var(--dark);
+}
+
+form.formContainer input,
+form.formContainer textarea {
+    width: 90%; /* Full width */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--back);
+    resize: vertical; /* Allow vertical resizing only */
+    overflow: auto; /* Prevent scrollbars when not needed */
+}
+
+/* Style the submit button */
+form.formContainer button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--prim);
+    color: var(--back);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    width: auto; /* Fit button width to its content */
+    align-self: center; /* Ensure button stays centered */
+}
+
+/* Button hover effect */
+form.formContainer button:hover {
+    background-color: var(--seco);
+}
+
+/* Home content */
+
+.homecontent {
+    margin-left: 7%; /* Offset the box from the left */
+    margin-top: 5%; /* Top margin for spacing */
+    margin-right: auto; /* Keep the right margin auto for flexible layout */
+    margin-bottom: 5%; /* Keep the right margin auto for flexible layout */
+    padding: 15px; /* Increase padding for a more spacious look */
+    border-radius: 12px; /* Rounded corners */
+    border: dashed;
+    border-color: var(--seco);
+    background-color: var(--prim); /* Background color */
+    width: 80%; /* Set the width to make the box wider */
+    height: 300px;
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    text-align: left; /* Ensure text inside is aligned to the left */
+    color: var(--back);
+}
